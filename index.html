@@ -4,33 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Sheet Data</title>
-    
-    <!-- Link to Google Fonts (Example: Roboto) -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    
-    <!-- Link to External CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Google Sheet Data</h1>
     </header>
-    
+
     <main>
-        <section id="content">
-            <p>Loading your data...</p>
-            <table id="dataTable">
-                <thead id="tableHead"></thead>
-                <tbody id="tableBody"></tbody>
-            </table>
-        </section>
+        <div id="loadingMessage">Loading your data...</div>
+        <table id="dataTable" style="display: none;">
+            <thead id="tableHead"></thead>
+            <tbody id="tableBody"></tbody>
+        </table>
     </main>
-    
+
     <footer>
         <p>&copy; 2024 Your Website. All Rights Reserved.</p>
     </footer>
 
-    <!-- Link to External JS -->
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
