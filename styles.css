@@ -1,23 +1,24 @@
-/* Reset and basic styles */
+/* General Body and Page Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #d8f3fc;
+    background-color: #d8f3fc; /* Light blue */
     color: #333;
 }
 
 header {
-    background-color: #ffe7fb;
+    background-color: #ffe7fb; /* Light pink */
     padding: 20px;
     text-align: center;
-    border-bottom: 2px solid #f4deff;
+    border-bottom: 2px solid #f4deff; /* Light purple */
 }
 
 h1 {
-    color: #c7ccff;
+    color: #c7ccff; /* Light lavender */
 }
 
+/* Table Styles */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -26,31 +27,23 @@ table {
 
 th, td {
     padding: 12px;
-    border: 1px solid #f4deff;
+    border: 1px solid #f4deff; /* Light purple */
     text-align: center;
 }
 
 th {
-    background-color: #f4deff;
+    background-color: #f4deff; /* Light purple */
 }
 
 tr:nth-child(even) {
-    background-color: #e2fffc;
+    background-color: #e2fffc; /* Light turquoise */
 }
 
 tr:hover {
-    background-color: #d8f3fc;
+    background-color: #d8f3fc; /* Light blue */
 }
 
-footer {
-    background-color: #ffe7fb;
-    text-align: center;
-    padding: 15px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
+/* Links Styling */
 a {
     color: #007bff;
     text-decoration: none;
@@ -60,9 +53,20 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Media queries */
+/* Footer Styling */
+footer {
+    background-color: #ffe7fb; /* Light pink */
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive Styling */
 @media (max-width: 768px) {
     table {
         font-size: 14px;
     }
+    /* Adjust other layout styles for mobile view */
 }
