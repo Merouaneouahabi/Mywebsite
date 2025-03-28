@@ -1,42 +1,88 @@
-/* Basic resets and global styles */
+/* Global Styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f4deff; /* Light lavender background */
+    color: #333;
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #d8f3fc; /* Light blue background */
+    color: #333;
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+header:hover {
+    background-color: #c7ccff; /* Change color on hover */
 }
 
 main {
-    padding: 1rem;
+    padding: 1.5rem;
+    background-color: #e2fffc; /* Light cyan background */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
-/* Table styles */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #ffe7fb; /* Light pink background */
+    color: #333;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+/* Table Styles */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+table:hover {
+    transform: scale(1.02);
 }
 
 th, td {
     padding: 12px;
     border: 1px solid #ddd;
     text-align: left;
+    transition: background-color 0.3s ease;
 }
 
 th {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #d8f3fc; /* Light blue header */
+    color: #333;
 }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+td {
+    background-color: #f4deff; /* Light lavender cells */
+}
+
+/* Hover Effects */
+tr:hover td {
+    background-color: #f4deff; /* Highlight row on hover */
+    transform: translateY(-2px);
+}
+
+th, td {
+    border-radius: 4px;
+}
+
+td a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+td a:hover {
+    color: #4CAF50; /* Green hover color for links */
 }
 
 /* Loading message styles */
@@ -44,6 +90,7 @@ tr:nth-child(even) {
     text-align: center;
     font-size: 1.5rem;
     margin-top: 20px;
+    color: #333;
 }
 
 /* Make the table responsive */
@@ -52,6 +99,7 @@ tr:nth-child(even) {
         font-size: 14px;
     }
     th, td {
-        padding: 8px;
+        padding: 10px;
     }
 }
+
