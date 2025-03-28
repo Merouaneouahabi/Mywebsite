@@ -1,4 +1,36 @@
-/* Styling for the table */
+/* General reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set background color and text styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    padding: 20px;
+}
+
+/* Container to center the content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Table Styling */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -6,26 +38,20 @@ table {
 }
 
 th, td {
-    border: 1px solid #ddd;
     padding: 12px;
     text-align: left;
+    border: 1px solid #ddd;
 }
 
 th {
-    background-color: #4CAF50;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    background-color: #f4f4f4;
 }
 
 tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
-tr:hover {
-    background-color: #ddd;
-}
-
+/* Styling links */
 a {
     color: #007bff;
     text-decoration: none;
@@ -35,13 +61,17 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Design for smaller screens */
+/* Make the page responsive */
 @media (max-width: 768px) {
     table {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     th, td {
-        padding: 10px;
+        padding: 8px;
+    }
+
+    .container {
+        padding: 15px;
     }
 }
