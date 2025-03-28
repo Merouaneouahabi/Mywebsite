@@ -15,7 +15,10 @@ const fetchData = async () => {
         const csvText = await response.text();
         const rows = csvText.split("\n").map(row => row.split(","));
 
+        // Generate table headers
         tableHead.innerHTML = rows[0].map(header => `<th>${header.trim()}</th>`).join("");
+
+        // Generate table rows
         rows.slice(1).forEach(row => {
             const rowHTML = row.map(cell => {
                 cell = cell.trim();
