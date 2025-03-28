@@ -1,47 +1,158 @@
-body {
-    font-family: sans-serif;
+/* General reset for margin and padding */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-header, main, footer {
-    padding: 1rem; /* Add some padding */
+/* Set the font, background color, and basic layout */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
 }
 
+/* Header */
 header {
-    background-color: #f0f0f0;
+    background-color: #007bff;
+    color: white;
     text-align: center;
+    padding: 20px 0;
 }
 
+h1 {
+    font-size: 2.5rem;
+}
+
+/* Main Layout */
 main {
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
+/* Content Section */
 #content {
-    flex: 1 1 70%; /* Occupy 70% of available width */
-    padding-right: 1rem; /* Add spacing between content and sidebar */
+    flex: 1 1 70%; /* Content takes 70% of the space */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-right: 20px;
 }
 
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#loading {
+    font-size: 1.2rem;
+    color: #888;
+}
+
+#error {
+    font-size: 1.2rem;
+    color: red;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Sidebar */
 aside {
-    flex: 1 1 30%; /* Occupy 30% of available width */
+    flex: 1 1 30%; /* Sidebar takes 30% of the space */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Media queries for responsiveness */
-@media (max-width: 768px) { /* Adjust breakpoint as needed */
+/* Responsive Design: Tablet and Phone */
+@media (max-width: 768px) {
     main {
-        flex-direction: column; /* Stack content and sidebar vertically */
+        flex-direction: column;
+        align-items: center;
     }
+
     #content {
         flex-basis: 100%; /* Content takes full width */
-        padding-right: 0; /* Remove padding when stacked */
+        margin-right: 0;
     }
+
     aside {
-        flex-basis: 100%; /* Sidebar also takes full width */
+        flex-basis: 100%; /* Sidebar takes full width */
+        margin-top: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
     }
 }
 
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+}
+
+/* Image Styling */
 img {
-    max-width: 100%; /* Prevent images from overflowing their container */
+    max-width: 100%;
     height: auto;
 }
