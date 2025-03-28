@@ -3,18 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futuristic Data Grid</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Google Sheet Data</title>
+    
+    <!-- Link to Google Fonts (Example: Roboto) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="data-container">
-        <div id="loading-indicator">
-            <div class="loader"></div>
-            Loading...
-        </div>
-        <div id="error-message" style="display: none;"></div>
-        <table id="data-table"></table>
-    </div>
-    <script src="script.js"></script>
+    <header>
+        <h1>Google Sheet Data</h1>
+    </header>
+    
+    <main>
+        <section id="content">
+            <p>Loading your data...</p>
+            <table id="dataTable">
+                <thead id="tableHead"></thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Your Website. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Link to External JS -->
+    <script src="js/script.js"></script>
 </body>
 </html>
