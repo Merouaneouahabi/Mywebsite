@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal website showcasing my work, skills, and experiences.">
+  <meta name="author" content="Merouane Ouahabi">
+  <title>Merouane Ouahabi - Personal Website</title>
+
+  <!-- Add a favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS Styles -->
+  <style>
+    /* Reset margin/padding for all elements */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body & Font */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #1e1e1e;
+      color: #fff;
+      line-height: 1.6;
+      padding-top: 50px; /* Space for sticky navbar */
+    }
+
+    h1, h2, h3 {
+      color: #f4f4f4;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #333;
+      padding: 10px 20px;
+      z-index: 9999;
+      transition: top 0.3s;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    nav ul li a:hover {
+      color: #f4a261;
+    }
+
+    /* Main Content */
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      margin-bottom: 20px;
+    }
+
+    .about {
+      background-color: #282828;
+    }
+
+    .portfolio {
+      background-color: #3a3a3a;
+    }
+
+    .contact {
+      background-color: #444;
+    }
+
+    /* Smooth Scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- About Section -->
+  <div id="about" class="section about">
+    <h2>About Me</h2>
+    <p>Hello! I'm Merouane Ouahabi, a web developer with a passion for creating beautiful and functional websites. I specialize in frontend technologies and love to explore new tools and frameworks.</p>
+  </div>
+
+  <!-- Portfolio Section -->
+  <div id="portfolio" class="section portfolio">
+    <h2>Portfolio</h2>
+    <p>Here are some of my projects:</p>
+    <!-- Example project, you can add more -->
+    <div>
+      <h3>Project 1</h3>
+      <p>Description of the project.</p>
+    </div>
+    <div>
+      <h3>Project 2</h3>
+      <p>Description of the project.</p>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div id="contact" class="section contact">
+    <h2>Contact Me</h2>
+    <p>You can reach me at: <strong>merouaneouahabi@proton.me</strong></p>
+  </div>
+
+  <!-- Footer Section -->
+  <footer style="text-align: center; padding: 10px; background-color: #333;">
+    <p>&copy; 2025 Merouane Ouahabi. All rights reserved.</p>
+  </footer>
+
+  <!-- Optional JavaScript (for smooth scroll or other animations) -->
+  <script>
+    // Optional: Add any JS you want to enhance functionality
+  </script>
+</body>
+</html>
