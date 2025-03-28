@@ -1,34 +1,23 @@
-/* Global Styles */
+/* Basic resets and global styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #f4f4f4;
 }
 
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 10px 0;
     text-align: center;
+    padding: 1rem;
 }
 
 main {
-    padding: 20px;
+    padding: 1rem;
 }
 
-footer {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-}
-
-h1 {
-    font-size: 2rem;
-}
-
-/* Table Styles */
+/* Table styles */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -37,8 +26,8 @@ table {
 
 th, td {
     padding: 12px;
-    text-align: left;
     border: 1px solid #ddd;
+    text-align: left;
 }
 
 th {
@@ -50,33 +39,19 @@ tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-a {
-    color: #007bff;
-    text-decoration: none;
+/* Loading message styles */
+#loadingMessage {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 20px;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive Table: Allow scrolling on small screens */
-#dataTable {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-}
-
-/* Media Queries for Mobile and Tablet */
+/* Make the table responsive */
 @media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 1.5rem;
-    }
-
     table {
-        font-size: 0.9rem;
+        font-size: 14px;
+    }
+    th, td {
+        padding: 8px;
     }
 }
