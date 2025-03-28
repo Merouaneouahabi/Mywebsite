@@ -3,19 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Database</title>
+    <title>Responsive Layout</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h2>My Database</h2>
-        <div id="loading" style="text-align: center; display: none;">Loading data...</div>  <!-- Loading indicator -->
-        <div id="error" style="text-align: center; color: red; display: none;"></div> <!-- Error message -->
-        <table id="dataTable">
-            <thead id="tableHead"></thead>
-            <tbody id="tableBody"></tbody>
-        </table>
-    </div>
+    <header>
+        <h1>My Responsive Website</h1>
+    </header>
+    <main>
+        <section id="content">
+            <!-- Your main content here -->
+            <p>This is some example content.  This text should reflow nicely across different screen sizes.</p>
+            <img src="placeholder.jpg" alt="Placeholder Image">
+        </section>
+        <aside>
+            <!-- Sidebar content -->
+            <p>This is a sidebar.  It might hide or adjust on smaller screens.</p>
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Website</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
