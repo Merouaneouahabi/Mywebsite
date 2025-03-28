@@ -15,7 +15,7 @@ body {
 
 /* Container to center the content */
 .container {
-    max-width: 1200px;
+    max-width: 1200px; /* Maximum width for large screens */
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
@@ -62,16 +62,60 @@ a:hover {
 }
 
 /* Make the page responsive */
-@media (max-width: 768px) {
+
+/* Mobile styles: These will apply to devices with a width of 600px or less */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
     table {
-        font-size: 14px;
+        font-size: 14px; /* Smaller text on mobile */
     }
 
     th, td {
         padding: 8px;
     }
+}
 
+/* Tablet styles: These will apply to devices with a width of 600px to 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
     .container {
-        padding: 15px;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    table {
+        font-size: 16px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}
+
+/* Desktop styles: These will apply to devices with a width of 1024px or more */
+@media (min-width: 1025px) {
+    .container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    table {
+        font-size: 18px; /* Larger text for desktop */
+    }
+
+    th, td {
+        padding: 12px;
     }
 }
