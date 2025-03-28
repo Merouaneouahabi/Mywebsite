@@ -1,21 +1,28 @@
 /* General Body and Page Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #d8f3fc; /* Light blue */
+    background-color: #f5f5f5; /* Light gray */
     color: #333;
+    line-height: 1.6;
 }
 
 header {
-    background-color: #ffe7fb; /* Light pink */
+    background-color: #3498db; /* A modern blue */
+    color: #fff;
     padding: 20px;
     text-align: center;
-    border-bottom: 2px solid #f4deff; /* Light purple */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    color: #c7ccff; /* Light lavender */
+    margin: 0;
+    font-size: 2.5em;
+}
+
+main {
+    padding: 20px;
 }
 
 /* Table Styles */
@@ -23,44 +30,84 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px;
+    overflow: hidden; /* Ensure rounded corners work */
 }
 
 th, td {
-    padding: 12px;
-    border: 1px solid #f4deff; /* Light purple */
-    text-align: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
 }
 
 th {
-    background-color: #f4deff; /* Light purple */
+    background-color: #3498db;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 tr:nth-child(even) {
-    background-color: #e2fffc; /* Light turquoise */
+    background-color: #f9f9f9;
 }
 
 tr:hover {
-    background-color: #d8f3fc; /* Light blue */
+    background-color: #e9f4fb; /* Lighter blue on hover */
 }
 
-/* Links Styling */
+/* Link Styling */
 a {
-    color: #007bff;
+    color: #3498db;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
+    color: #2980b9;
     text-decoration: underline;
+}
+
+/* Loading Message */
+#loadingMessage {
+    text-align: center;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+/* Error Message */
+#errorMessage {
+    color: #e74c3c; /* Red */
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fddede;
+    border: 1px solid #e74c3c;
+    border-radius: 5px;
 }
 
 /* Footer Styling */
 footer {
-    background-color: #ffe7fb; /* Light pink */
+    background-color: #3498db;
+    color: #fff;
     text-align: center;
     padding: 15px;
     position: fixed;
     width: 100%;
     bottom: 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Input Styling */
+#controls {
+  margin-bottom: 15px;
+}
+
+#searchInput {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 250px;
 }
 
 /* Responsive Styling */
@@ -68,5 +115,16 @@ footer {
     table {
         font-size: 14px;
     }
-    /* Adjust other layout styles for mobile view */
+
+    th, td {
+        padding: 8px 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    #searchInput {
+      width: 100%;
+    }
 }
