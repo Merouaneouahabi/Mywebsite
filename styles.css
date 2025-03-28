@@ -1,72 +1,47 @@
-/* General reset for margin and padding */
-* {
+body {
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    display: flex;
-    justify-content: center; /* Center the container horizontally */
-    align-items: center; /* Center the container vertically */
-    min-height: 100vh; /* Ensure the container takes up full viewport height */
+header, main, footer {
+    padding: 1rem; /* Add some padding */
 }
 
-
-.container {
-    max-width: 1200px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
+header {
+    background-color: #f0f0f0;
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    border-spacing: 0; /* Remove default spacing between cells */
+main {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
 }
 
-th, td {
-    padding: 12px 15px; /* Added some padding for better readability */
-    text-align: left;
-    border: 1px solid #ddd;
+#content {
+    flex: 1 1 70%; /* Occupy 70% of available width */
+    padding-right: 1rem; /* Add spacing between content and sidebar */
 }
 
-th {
-    background-color: #f2f2f2;
-    font-weight: bold;
+aside {
+    flex: 1 1 30%; /* Occupy 30% of available width */
 }
 
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive adjustments (simplified) */
-@media (max-width: 768px) {
-    table {
-        font-size: 14px;
+/* Media queries for responsiveness */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    main {
+        flex-direction: column; /* Stack content and sidebar vertically */
     }
-    th, td {
-        padding: 8px;
+    #content {
+        flex-basis: 100%; /* Content takes full width */
+        padding-right: 0; /* Remove padding when stacked */
     }
+    aside {
+        flex-basis: 100%; /* Sidebar also takes full width */
+    }
+}
+
+img {
+    max-width: 100%; /* Prevent images from overflowing their container */
+    height: auto;
 }
