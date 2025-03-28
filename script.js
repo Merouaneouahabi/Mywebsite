@@ -1,21 +1,28 @@
+// Google Sheets CSV URL
+const sheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR9PP2C18SawMDZ_6hbrX-DWTknEvGnJThqmQYYrLZSPqY3yd_0aTCrnkNH5wW3VW9fvDY9zEqxlSOc/pub?gid=0&single=true&output=csv";
+
+// Elements
+const loadingMessage = document.getElementById("loadingMessage");
 const tableHead = document.getElementById("tableHead");
 const tableBody = document.getElementById("tableBody");
-const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR9PP2C18SawMDZ_6hbrX-DWTknEvGnJThqmQYYrLZSPqY3yd_0aTCrnkNH5wW3VW9fvDY9zEqxlSOc/pub?gid=0&single=true&output=csv";
+const dataTable = document.getElementById("dataTable");
 
-// Fetching the Google Sheets data
+// Fetching data from the Google Sheet
 const fetchData = async () => {
     try {
-        const response = await fetch(url);
+        loadingMessage.style.display = "block"; // Show loading message
+
+        const response = await fetch(sheetUrl);
         if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+            throw new Error("Failed to fetch data.");
         }
         const csvText = await response.text();
         const rows = csvText.split("\n").map(row => row.split(","));
 
-        // Fill the table header
+        // Fill table head
         tableHead.innerHTML = rows[0].map(header => `<th>${header.trim()}</th>`).join("");
 
-        // Fill the table body
+        // Fill table body
         rows.slice(1).forEach(row => {
             const rowHTML = row.map(cell => {
                 cell = cell.trim();
@@ -27,13 +34,16 @@ const fetchData = async () => {
                     return `<td>${cell}</td>`;
                 }
             }).join("");
+
             tableBody.innerHTML += `<tr>${rowHTML}</tr>`;
         });
+
+        loadingMessage.style.display = "none"; // Hide loading message
+        dataTable.style.display = "table"; // Show table
     } catch (error) {
-        console.error("Error fetching data:", error);
-        tableBody.innerHTML = `<tr><td colspan="100%">Error loading data</td></tr>`;
+        loadingMessage.textContent = `Error loading data: ${error.message}`;
     }
 };
 
-// Call the fetch function
+// Load the data when the page is ready
 fetchData();
