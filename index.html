@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Sheet Data</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
@@ -13,14 +14,21 @@
 
     <main>
         <div id="loadingMessage">Loading your data...</div>
+
+        <div id="controls">
+            <input type="text" id="searchInput" placeholder="Search...">
+        </div>
+
         <table id="dataTable" style="display: none;">
             <thead id="tableHead"></thead>
             <tbody id="tableBody"></tbody>
         </table>
+
+        <div id="errorMessage" style="display: none;"></div>
     </main>
 
     <footer>
-        <p>&copy; 2024 Your Website. All Rights Reserved.</p>
+        <p>© 2024 Your Website. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
