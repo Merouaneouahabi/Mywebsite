@@ -1,134 +1,68 @@
-/* Global Styles */
+/* Reset and basic styles */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4deff; /* Light lavender background */
+    background-color: #d8f3fc;
     color: #333;
 }
 
 header {
-    background-color: #d8f3fc; /* Light blue background */
-    color: #333;
+    background-color: #ffe7fb;
+    padding: 20px;
     text-align: center;
-    padding: 1.5rem;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    border-bottom: 2px solid #f4deff;
 }
 
-header:hover {
-    background-color: #c7ccff; /* Change color on hover */
-    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+h1 {
+    color: #c7ccff;
 }
 
-main {
-    padding: 2rem;
-    background-color: #e2fffc; /* Light cyan background */
-    border-radius: 12px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    transition: all 0.3s ease;
-}
-
-main:hover {
-    transform: translateY(-4px); /* Slightly lift the main section */
-}
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #ffe7fb; /* Light pink background */
-    color: #333;
-    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
-}
-
-footer:hover {
-    background-color: #f4deff;
-}
-
-/* Table Styles */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    transition: all 0.3s ease;
-}
-
-table:hover {
-    transform: scale(1.02);
 }
 
 th, td {
     padding: 12px;
-    border: 1px solid #ddd;
-    text-align: left;
-    transition: background-color 0.3s ease;
-    border-radius: 8px; /* Rounded corners */
+    border: 1px solid #f4deff;
+    text-align: center;
 }
 
 th {
-    background-color: #d8f3fc; /* Light blue header */
-    color: #333;
+    background-color: #f4deff;
 }
 
-td {
-    background-color: #f4deff; /* Light lavender cells */
+tr:nth-child(even) {
+    background-color: #e2fffc;
 }
 
-/* Hover Effects */
-tr:hover td {
-    background-color: #c7ccff; /* Highlight row with soft blue */
-    transform: translateY(-2px);
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+tr:hover {
+    background-color: #d8f3fc;
 }
 
-th, td {
-    border-radius: 8px;
-}
-
-td a {
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-td a:hover {
-    color: #4CAF50; /* Green hover color for links */
-}
-
-/* Loading message styles */
-#loadingMessage {
+footer {
+    background-color: #ffe7fb;
     text-align: center;
-    font-size: 1.5rem;
-    margin-top: 20px;
-    color: #333;
-    font-weight: bold;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
-/* Make the table responsive */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Media queries */
 @media (max-width: 768px) {
     table {
         font-size: 14px;
     }
-    th, td {
-        padding: 10px;
-    }
-}
-
-/* Beautiful Button Styles for Future Expansion */
-button {
-    padding: 10px 20px;
-    background-color: #4CAF50; /* Green background */
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-button:hover {
-    background-color: #45a049;
-    transform: translateY(-2px);
 }
